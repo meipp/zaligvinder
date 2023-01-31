@@ -12,5 +12,6 @@ RUN git clone https://github.com/meipp/nielsen-transformation.git
 WORKDIR /nielsen-transformation
 RUN stack install
 RUN mkdir /zaligvinder/
+WORKDIR /zaligvinder
 COPY . /zaligvinder/
 RUN echo '{"Binaries" : {"Z3Bin" : {"path" : "/tools/z3/z3-4.8.10-x64-ubuntu-18.04/bin/z3"},"cvc4" : {"path" : "/tools/cvc4/cvc4"},"cvc5" : {"path" : "/tools/cvc5/cvc5"},"nielsen-transformation" : {"path" : "/root/.local/bin/nielsen-transformation"}}}' > /zaligvinder/toolconfig.json
