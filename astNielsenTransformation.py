@@ -6,6 +6,7 @@ import storage
 import voting.majority as voting
 import tools.cvc4
 import tools.cvc5
+import tools.nielsen_transformation
 
 import models.handcrafted
 import startwebserver
@@ -23,6 +24,7 @@ for s in [tools.cvc4,
           tools.cvc5,
           tools.z3seqbin,
           tools.z3str3bin,
+          tools.nielsen_transformation,
 ]:
     s.addRunner (solvers)
 
