@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.+ (str.to.re "6"))))
-(assert (str.in.re y (re.* (str.to.re "ppcV/+6"))))
-(assert (= (str.len x) 0))
-(assert (= (str.len y) 10))
-(check-sat)

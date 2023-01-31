@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= (str.len x) 16))
-(assert (str.in.re x (re.* (str.to.re "yyffDD"))))
-(assert (str.in.re x (re.* (str.to.re "yyDDvv''\\\\rr''"))))
-(check-sat)

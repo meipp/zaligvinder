@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (= x "&'\r'!&'\r'!"))
-(assert (str.in.re x (re.* (re.* (str.to.re "&'\r'!")))))
-(check-sat)

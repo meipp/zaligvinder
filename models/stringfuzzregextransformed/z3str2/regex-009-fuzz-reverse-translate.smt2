@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.+ (str.to.re "cp:NFQ"))))
-(assert (str.in.re x (re.+ (str.to.re "h!D)='\x0b'FK*#Z/VoofssoTWQ"))))
-(assert (> (str.to.int x) 28))
-(assert (< (str.len x) 3))
-(check-sat)

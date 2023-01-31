@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "iiOO!!ff!!ff%%"))
-(assert (str.in.re x (str.to.re "!!ff%%")))
-(check-sat)

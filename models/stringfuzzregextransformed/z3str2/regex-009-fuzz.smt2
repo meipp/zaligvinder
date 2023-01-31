@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.+ (str.to.re "I6@h'\x0b'6d"))))
-(assert (str.in.re x (re.+ (str.to.re "bbtY/Wd(<abTD$'\n'd"))))
-(assert (> (str.len x) 16))
-(assert (< (str.to.int x) 46))
-(check-sat)

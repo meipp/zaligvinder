@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (= x "VVuuaa..JJYY))''\\\\xx00cc''--DD}}22]]<<''\\\\xx00bb''..66VVVV"))
-(assert (str.in.re x (re.* (re.+ (str.to.re "++''\\\\xx00bb''//XX")))))
-(check-sat)

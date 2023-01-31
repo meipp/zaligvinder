@@ -1,4 +1,0 @@
-(declare-const X String)
-; \x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax
-(assert (not (str.in.re X (str.to.re "\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax\x0a"))))
-(check-sat)

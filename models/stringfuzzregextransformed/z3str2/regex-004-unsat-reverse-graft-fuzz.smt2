@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "e2' '/cc>a"))
-(assert (str.in.re x (re.union (re.+ (re.+ (str.to.re "ed"))) (str.to.re "d-4a"))))
-(check-sat)

@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "??\\\\\\\\RRppqq??\\\\\\\\??\\\\\\\\RR"))
-(assert (str.in.re x (str.to.re "ppqq??\\\\\\\\")))
-(check-sat)

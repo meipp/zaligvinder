@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "hN#I#I'\r'"))
-(assert (str.in.re x (re.union (re.* (re.* (str.to.re "#I'\r'"))) (str.to.re "hN#I"))))
-(check-sat)

@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= (str.to.int x) 12))
-(assert (str.in.re x (re.+ (str.to.re "de!$"))))
-(assert (str.in.re x (re.* (str.to.re ":{'hAa"))))
-(check-sat)

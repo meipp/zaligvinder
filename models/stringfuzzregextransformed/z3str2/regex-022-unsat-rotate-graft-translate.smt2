@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.* (re.++ (str.to.re "'\t'") (re.* (str.to.re "]"))))))
-(assert (= 2 (str.len x)))
-(assert (not (= x "]]")))
-(assert (not (= x "'\t']")))
-(check-sat)

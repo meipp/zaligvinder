@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const S String)
-(assert (str.in.re S (re.union (str.to.re "aaH)E(_i|0QwG<b^nx") re.allchar)))
-(assert (not (str.in.re S (re.union (str.to.re "aaa") re.allchar))))
-(check-sat)

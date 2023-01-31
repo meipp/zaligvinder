@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.* (str.to.re "{{gg"))))
-(assert (str.in.re x (re.* (str.to.re "{{gg{{gg"))))
-(assert (str.in.re x (re.* (str.to.re "{{gg{{gg{{AA"))))
-(assert (> (str.len x) 2))
-(check-sat)

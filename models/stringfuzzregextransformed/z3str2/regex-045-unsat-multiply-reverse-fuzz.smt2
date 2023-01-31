@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(declare-const m String)
-(declare-const n String)
-(assert (not (str.in.re x (re.* (str.to.re "_Vm+'\t'#e9'\r'F.6")))))
-(assert (= x "cLrfzbB{xN'\n'tl?P}*[R1"))
-(check-sat)

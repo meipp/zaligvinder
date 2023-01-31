@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (= x "[Y{[Y{"))
-(assert (str.in.re x (str.to.re "[Y{")))
-(check-sat)

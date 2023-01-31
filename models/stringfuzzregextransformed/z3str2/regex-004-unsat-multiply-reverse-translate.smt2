@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "..VVjjVVjj--'\t''\t'"))
-(assert (str.in.re x (re.union (re.* (str.to.re "VVjj--'\t''\t'")) (re.* (str.to.re "..VVjj")))))
-(check-sat)

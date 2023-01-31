@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x "e'' ''SBY;*D$'n\\'v=.eNC?<""""9fQ"))
-(assert (str.in.re x (re.+ (re.++ (str.to.re "b6c") (str.to.re "cbjv")))))
-(check-sat)

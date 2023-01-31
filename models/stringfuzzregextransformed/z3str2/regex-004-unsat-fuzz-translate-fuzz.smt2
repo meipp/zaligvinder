@@ -1,5 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(assert (= x ".G(PJ""G"))
-(assert (str.in.re x (re.++ (re.* (str.to.re "h]mU>$c6+35t")) (re.+ (str.to.re "J")))))
-(check-sat)

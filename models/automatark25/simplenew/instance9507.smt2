@@ -1,4 +1,0 @@
-(declare-const X String)
-; metaresults\.copernic\.comServer\x00
-(assert (str.in.re X (str.to.re "metaresults.copernic.comServer\x00\x0a")))
-(check-sat)

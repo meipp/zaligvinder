@@ -1,6 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (= x "vvAKVvv~e4rhLiw0DLLD;.4"))
-(assert (str.in.re x (str.to.re "h;")))
-(check-sat)

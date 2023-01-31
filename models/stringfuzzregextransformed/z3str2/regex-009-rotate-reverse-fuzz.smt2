@@ -1,8 +1,0 @@
-(set-logic QF_S)
-(declare-const x String)
-(declare-const y String)
-(assert (str.in.re x (re.* (str.to.re "dc4.M"))))
-(assert (str.in.re x (re.* (str.to.re "dzsxNa`' '?jD/$MmOB"))))
-(assert (> (str.to.int x) 19))
-(assert (< (str.len x) 27))
-(check-sat)
