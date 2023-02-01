@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "gs\\QPf.''\n',NNeCl>\\|mT<&{jN"))
+(assert (str.in_re x (re.* (re.+ (str.to_re "Uu7")))))
+(check-sat)

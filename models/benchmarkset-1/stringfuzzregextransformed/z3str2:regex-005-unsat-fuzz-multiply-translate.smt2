@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "NNNNGGJJ[[zzxxNN'\u{b}''\u{b}''\u{c}''\u{c}''\u{b}''\u{b}'--UUUUVV--eeggii--%%eeZZ99$$ddNN"))
+(assert (str.in_re x (re.+ (re.* (str.to_re "..||")))))
+(check-sat)

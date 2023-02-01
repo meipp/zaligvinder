@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "VVuuaa..JJYY))''\\\\u{x0}0cc''--DD}}22]]<<''\\\\u{x0}0bb''..66VVVV"))
+(assert (str.in_re x (re.* (re.+ (str.to_re "++''\\\\u{x0}0bb''//XX")))))
+(check-sat)

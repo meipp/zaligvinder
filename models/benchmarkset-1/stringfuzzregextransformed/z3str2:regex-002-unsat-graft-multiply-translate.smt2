@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "gggggggggggggggggg"))
+(assert (str.in_re x (str.to_re "'\n''\n''\r''\r'##")))
+(check-sat)

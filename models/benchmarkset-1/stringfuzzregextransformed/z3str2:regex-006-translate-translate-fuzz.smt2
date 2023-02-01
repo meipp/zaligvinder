@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "!FZcawr' 'W}kl[LTcl""g$De[J9lh(R(5Z1^>B'\u{b}'jYv;%;p<RY;'\r'_+P*KeGBL|5v\\sO$x'\n'+Fi]c&or''\u{c}'v'\t'VA2hpA=Hz6xri('x0O|_Je'>V~9prG^""7qLy&MBx:z'\t'.1#1Q\\z/*C],*A;' ''\u{b}';A1\\''\\\\`d?2uJ[2o\\J~%?:[~&=NF.IDGaktUaX""[&9RY%fe/Qb!'\u{b}'l:m$9EX&'\u{b}'dTSM,TyIk' 'LXB&k'\r'tap2;#G\\/jUd'\n'P7A'\t'-h\\FU,}2W@f92\\t"))
+(assert (str.in_re x (re.* (re.* (str.to_re "'\u{b}'<(\\)7' '{+6<-v6zMy]zk3'Zq""eD29q6n(9<Y'\u{c}'NM4d'\u{c}'/.9Lcsyo3lGdMF)7Tg0?+tR")))))
+(check-sat)

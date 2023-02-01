@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "ecc'' ''yZ};^s'n\\'>56B"))
+(assert (str.in_re x (str.to_re "nO'r")))
+(check-sat)

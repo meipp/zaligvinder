@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "GU=U='\u{c}'|"))
+(assert (str.in_re x (re.union (re.* (re.* (str.to_re "GU="))) (str.to_re "U='\u{c}'|"))))
+(check-sat)

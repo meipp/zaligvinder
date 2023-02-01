@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "0f*}<dba"))
+(assert (str.in_re x (re.++ (re.+ (re.* (str.to_re "<XsCPK-"))) (str.to_re "dy^a"))))
+(check-sat)

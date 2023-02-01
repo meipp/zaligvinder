@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "''\\\\u{x0}0bb''LL]]ddeeaacc''\\\\tt''5577cc<<;;"))
+(assert (str.in_re x (str.to_re "\\\\\\\\00II&&>>VV")))
+(check-sat)

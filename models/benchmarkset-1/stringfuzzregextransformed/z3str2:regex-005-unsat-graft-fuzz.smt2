@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "fV*Vg~z6<zzwY'\u{c}'Q4atd'\n'4]~'\u{b}'\\[Hi*S[xSq"))
+(assert (str.in_re x (re.* (str.to_re ""))))
+(check-sat)

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "$Xi/i/]"))
+(assert (str.in_re x (re.union (str.to_re "i/]") (re.* (re.* (str.to_re "$Xi/"))))))
+(check-sat)

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "N(\\\\\\\\(\\\\\\\\]'b0x\\\\'N(\\\\\\\\"))
+(assert (str.in_re x (re.* (str.to_re "N(\\\\\\\\"))))
+(check-sat)

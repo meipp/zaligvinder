@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "iiOO!!ff!!ff%%"))
+(assert (str.in_re x (str.to_re "!!ff%%")))
+(check-sat)

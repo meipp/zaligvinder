@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "!'\\r''\\t'ZL0F'\\t'!'\\r''\\t'ZL0F'\\t'"))
+(assert (str.in_re x (re.* (re.* (str.to_re "!'\\r''\\t'ZL0F'\\t'")))))
+(check-sat)

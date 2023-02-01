@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "y!^!^:Gy!^"))
+(assert (str.in_re x (re.* (re.union (str.to_re "!^:G") (str.to_re "y!^")))))
+(check-sat)

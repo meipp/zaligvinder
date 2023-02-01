@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "nO28dZv'\r'Ps9*TJ!+g@{MsS'\u{c}'Hibcb'\n'h|wc]-%}9P' 'Cj\\jw@wvwG$q<H[""Pc5Y,1&"))
+(assert (str.in_re x (re.* (str.to_re "Pd"))))
+(check-sat)

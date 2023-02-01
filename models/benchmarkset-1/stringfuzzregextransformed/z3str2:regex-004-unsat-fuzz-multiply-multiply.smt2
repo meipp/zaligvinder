@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "aaaabbbb$$$$!!!!PPPPddddccccdddd"))
+(assert (str.in_re x (re.union (re.* (str.to_re "AAAAhhhh''''{{{{::::cccc~~~~9999")) (re.+ (str.to_re "ccccdddd")))))
+(check-sat)

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "td7#eczIZvcm'\t''PtU'\t's_['\n''\u{c}'yE'\\nW"))
+(assert (str.in_re x (re.union (re.+ (re.* (str.to_re "19i?_'\\' 'me'"))) (str.to_re "rteag"))))
+(check-sat)

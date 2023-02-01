@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "Qf9""""<?CNe.=v'\\n'$D*;YBS'' ''e"))
+(assert (str.in_re x (str.to_re "c6b")))
+(check-sat)

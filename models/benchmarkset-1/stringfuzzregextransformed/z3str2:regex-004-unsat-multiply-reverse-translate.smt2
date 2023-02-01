@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "..VVjjVVjj--'\t''\t'"))
+(assert (str.in_re x (re.union (re.* (str.to_re "VVjj--'\t''\t'")) (re.* (str.to_re "..VVjj")))))
+(check-sat)

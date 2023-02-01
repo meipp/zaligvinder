@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "{-uVuVoks0$o"))
+(assert (str.in_re x (re.union (re.* (str.to_re "{-uV")) (re.* (str.to_re "uVoks0$o")))))
+(check-sat)

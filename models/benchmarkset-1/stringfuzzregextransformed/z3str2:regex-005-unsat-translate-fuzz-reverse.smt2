@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "VV6.'b0x\\'<]2}D-'c0x\\')YJ.auV"))
+(assert (str.in_re x (re.* (re.+ (str.to_re "X/'b0x\\'+")))))
+(check-sat)

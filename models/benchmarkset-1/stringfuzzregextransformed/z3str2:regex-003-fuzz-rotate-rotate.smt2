@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "cd$!PCZahAh'\\\\n'c<w'{c~9^Gd"))
+(assert (str.in_re x (re.+ (re.++ (str.to_re "TE;U%x7") (str.to_re "}d")))))
+(check-sat)

@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "aa=#P4c2T`%[]gr(u-hXS""]f^aD=]T"))
+(assert (str.in_re x (re.+ (re.+ (str.to_re "e")))))
+(check-sat)

@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "aa((SS991166aaaaqqee<<''\\\\rr''||__ee{{11''\\\\u{x0}0bb''66MMff"))
+(assert (str.in_re x (re.+ (re.+ (str.to_re "33TTvv::FF''\\\\nn''")))))
+(check-sat)

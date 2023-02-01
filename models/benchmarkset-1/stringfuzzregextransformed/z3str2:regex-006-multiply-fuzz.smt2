@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "aab5/'\u{b}'v`}BmdzW\\cc"))
+(assert (str.in_re x (re.* (re.* (str.to_re "a_&bB%;Bn.")))))
+(check-sat)

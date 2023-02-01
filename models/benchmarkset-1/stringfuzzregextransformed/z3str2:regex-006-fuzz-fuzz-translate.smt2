@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "H&'\u{b}'!<Z6J]&X)QlY.h0"))
+(assert (str.in_re x (re.+ (re.+ (str.to_re "[nZNv'Ku")))))
+(check-sat)
