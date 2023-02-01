@@ -23,8 +23,8 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
 
     f=open(eq,"r")
     copy=open(smtfile,"w")
-    firstLine = None 
-    
+    firstLine = None
+
     if not setLogicPresent:
         copy.write("(set-logic QF_SLIA)\n")
 
@@ -37,8 +37,8 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
             firstLine = False 
         for exp in ["\(get-model\)","\(check-sat\)","\(exit\)","\(set-info :status sat\)","\(set-info :status unsat\)"]:
             l = re.sub(exp, '', l)
-        
-        
+
+
         if "(set-logic" in l:
             l = re.sub('\(set-logic.*?\)', '(set-logic QF_SLIA)', l)
         copy.write(l)
@@ -46,16 +46,16 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
     copy.write("\n(check-sat)")
     f.close()
     copy.close() 
-    
+
 
     time = timer.Timer ()
     try:
-        out = subprocess.check_output ([path,"--lang","smtlib2.5","--no-interactive","--no-interactive-prompt","--strings-exp","--dump-models","--tlimit-per",str(timeout)+"000",smtfile],timeout=int(timeout)).decode().strip()
+        out = subprocess.check_output ([path,"--lang","smtlib2","--no-interactive","--strings-exp","--dump-models","--tlimit-per",str(timeout)+"000",smtfile],timeout=int(timeout)).decode().strip()
     except subprocess.TimeoutExpired:
         return utils.Result(None,timeout*1000,True,1)
     except subprocess.CalledProcessError as e:
         time.stop()
-    
+
         if time.getTime() >= timeout:
             return utils.Result(None,time.getTime_ms(),True,1)
         else:
