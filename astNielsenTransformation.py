@@ -9,10 +9,12 @@ import tools.cvc5
 import tools.nielsen_transformation
 
 import models.handcrafted
+import models.benchmarkset_1
 import startwebserver
 
 import summarygenerators
 tracks = (models.handcrafted.getTrackData ("handcrafted") +
+          models.benchmarkset_1.getTrackData ("benchmarkset_1") +
         []
         )
 
