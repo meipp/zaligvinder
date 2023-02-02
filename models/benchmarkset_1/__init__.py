@@ -17,5 +17,5 @@ def getTrackData (bname = None):
               models.benchmarkset_1.stringfuzzregextransformed,
               models.benchmarkset_1.z3_regression,
               ]:
-        res = res+k.getTrackData (bname or "benchmarkset_1")
+        res = res+k.getTrackData (bname or "benchmarkset-1")
     return res
