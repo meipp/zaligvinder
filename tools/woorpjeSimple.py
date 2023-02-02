@@ -26,7 +26,7 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
             return utils.Result(None,time.getTime_ms(),True,1)
         else:
             out = "Error in " + eq + ": " + str(e.output)
-            return utils.Result(None,time.getTime_ms(),False,1,out)
+            # return utils.Result(None,time.getTime_ms(),False,1,out)
 
     time.stop ()
     if "unsat" in out:
