@@ -11,11 +11,13 @@ import tools.woorpjeSimple
 
 import models.handcrafted
 import models.benchmarkset_1
+import models.benchmarkset_2
 import startwebserver
 
 import summarygenerators
 tracks = (models.handcrafted.getTrackData ("handcrafted") +
-          models.benchmarkset_1.getTrackData ("benchmarkset_1") +
+          models.benchmarkset_1.getTrackData ("benchmarkset-1") +
+          models.benchmarkset_2.getTrackData ("benchmarkset-2") +
         []
         )
 
