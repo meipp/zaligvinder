@@ -17,7 +17,6 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
         call = [path, "--nobanner", "--solver", "1", "--smtsolver", "1", eq]
         # print(" ".join(call))
         out = subprocess.check_output (call,timeout=int(timeout)).decode().strip()
-        # print("=============== woorpje OUTPUT ===============", out)
     except subprocess.TimeoutExpired:
         return utils.Result(None,timeout*1000,True,1)
     except subprocess.CalledProcessError as e:
