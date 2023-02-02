@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "QQ{{CCNNAAQQ{{QQ{{CC"))
+(assert (str.in_re x (re.* (re.union (str.to_re "NNAAQQ{{") (str.to_re "QQ{{CC")))))
+(check-sat)

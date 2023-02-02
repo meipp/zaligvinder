@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "R)inin'\\u{b}'"))
+(assert (str.in_re x (re.union (re.* (str.to_re "R)in")) (str.to_re "in'\\u{b}'"))))
+(check-sat)

@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "' '7;~dI+.B9&>"))
+(assert (str.in_re x (re.++ (re.+ (re.+ (str.to_re "B>"))) (str.to_re "A2@%B"))))
+(check-sat)

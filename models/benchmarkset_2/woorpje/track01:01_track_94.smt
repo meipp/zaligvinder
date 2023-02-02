@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-fun A () String)
+(assert (= (str.++  "cdacdeceecacedddeaedaebdcababaedbbddeeceaecccbdeecbdcecbaedbacacdebecedcabccdabccabbddbcbbacebcbbabcbdabaadebecabaccbaaceaecaabebcada" "")  (str.++  "cdacdeceecacedddeaedaebdcababaedbbddeeceaecccbdeecbd" A "cdabccabbddbcbbacebcbbabcbdabaadebecabaccbaaceaecaabebcada") ))
+(check-sat)
+(get-model)

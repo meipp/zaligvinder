@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "--{{''\\\\u{x0}0cc''--{{''\\\\u{x0}0cc''"))
+(assert (str.in_re x (re.* (re.* (str.to_re "--{{''\\\\u{x0}0cc''")))))
+(check-sat)

@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "'\u{c}'?N'\u{c}'?N"))
+(assert (str.in_re x (re.* (str.to_re "'\u{c}'?N"))))
+(check-sat)

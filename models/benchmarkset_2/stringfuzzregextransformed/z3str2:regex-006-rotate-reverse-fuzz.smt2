@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "cm'\r''\t'ua'\n'%&5"))
+(assert (str.in_re x (re.* (re.+ (str.to_re "&")))))
+(check-sat)

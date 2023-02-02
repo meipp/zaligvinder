@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "deaccde"))
+(assert (str.in_re x (re.* (re.++ (str.to_re "aJ)d") (str.to_re "e")))))
+(check-sat)

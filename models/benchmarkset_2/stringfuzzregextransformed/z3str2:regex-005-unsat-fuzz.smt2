@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "XH'\u{b}'OAR!CAha+5>7v[_T+a7'\t'fZ"))
+(assert (str.in_re x (re.+ (re.* (str.to_re "'\u{c}'SQ|$")))))
+(check-sat)

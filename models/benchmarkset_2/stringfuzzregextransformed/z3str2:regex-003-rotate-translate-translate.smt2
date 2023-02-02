@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "[D_S'[D[D_"))
+(assert (str.in_re x (re.* (re.union (str.to_re "S'[D") (str.to_re "[D_")))))
+(check-sat)

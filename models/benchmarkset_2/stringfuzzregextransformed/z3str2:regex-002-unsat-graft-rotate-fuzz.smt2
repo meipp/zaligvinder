@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "[r_(TwL[,""aa1W-\\_q'\u{b}''_<))~""Ge)a"))
+(assert (str.in_re x (str.to_re "{:?pqX>")))
+(check-sat)

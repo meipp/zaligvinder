@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "dQS~6=&VMBMN,d"))
+(assert (str.in_re x (str.to_re "")))
+(check-sat)

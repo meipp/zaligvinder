@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "W'n\\'<'n\\'<t;"))
+(assert (str.in_re x (re.union (re.* (re.* (str.to_re "W'n\\'<"))) (str.to_re "'n\\'<t;"))))
+(check-sat)

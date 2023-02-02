@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "bPm-PPm}P=L0&Pm}PbPm-PPm}P=L0&Pm}P"))
+(assert (str.in_re x (re.* (re.* (str.to_re "bPm-PPm}P=L0&Pm}P")))))
+(check-sat)

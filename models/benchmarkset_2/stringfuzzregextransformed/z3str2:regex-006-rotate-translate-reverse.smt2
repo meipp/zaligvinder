@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-const x String)
+(declare-const y String)
+(assert (= x "{'c0x\\'f{'c0x\\'f"))
+(assert (str.in_re x (re.* (re.* (str.to_re "{'c0x\\'f")))))
+(check-sat)

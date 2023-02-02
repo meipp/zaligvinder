@@ -1,0 +1,4 @@
+(set-logic ALL)
+(declare-fun var0 () String)
+(assert (= (str.++ "nk^" var0) (str.++ var0 "ROA")))
+(check-sat)

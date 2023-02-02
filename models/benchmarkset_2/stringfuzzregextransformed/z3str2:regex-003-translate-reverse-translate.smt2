@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "yxGGGGxGGGG%;'\t'0aGG;yxGGGG"))
+(assert (str.in_re x (re.* (re.union (str.to_re "xGGGG%;'\t'0aGG;") (str.to_re "yxGGGG")))))
+(check-sat)

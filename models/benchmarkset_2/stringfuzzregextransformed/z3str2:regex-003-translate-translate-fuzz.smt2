@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "a>.dgC'\n'X6wudKap({c{*"))
+(assert (str.in_re x (re.* (re.union (str.to_re "NAV9uW") (str.to_re "")))))
+(check-sat)

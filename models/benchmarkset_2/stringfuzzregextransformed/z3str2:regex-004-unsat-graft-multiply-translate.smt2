@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-const x String)
+(assert (= x "~~eeSS!!SS!!hh"))
+(assert (str.in_re x (str.to_re "SS!!hh")))
+(check-sat)
