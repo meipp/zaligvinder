@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack -y
+RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux -y
 
 # woorpje dependencies
 RUN apt-get install cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool -y
@@ -31,4 +31,4 @@ RUN mkdir /zaligvinder/
 WORKDIR /zaligvinder
 COPY . /zaligvinder/
 RUN echo '{"Binaries" : {"Z3Bin" : {"path" : "/usr/bin/z3"},"cvc4" : {"path" : "/usr/bin/cvc4"},"cvc5" : {"path" : "/usr/bin/cvc5"},"nielsen-transformation" : {"path" : "/usr/bin/nielsen-transformation"},"woorpjeSMT" : {"path" : "/usr/bin/woorpjeSMT"}}}' > /zaligvinder/toolconfig.json
-CMD python3 astNielsenTransformation.py
+CMD tmux new-session python3 ./astNielsenTransformation.py
