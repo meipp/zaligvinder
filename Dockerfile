@@ -1,12 +1,10 @@
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool"
 
 RUN apt-get update
-RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux -y
-
-# woorpje dependencies
-RUN apt-get install cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool -y
+RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux ${WOORPJE_DEPS} -y
 
 RUN pip3 install numpy tabulate npyscreen matplotlib
 RUN wget -O /usr/bin/cvc4 https://github.com/CVC4/CVC4/releases/download/1.8/cvc4-1.8-x86_64-linux-opt && chmod +x /usr/bin/cvc4
