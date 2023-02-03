@@ -21,6 +21,7 @@ WORKDIR /woorpje/build
 RUN cmake ..
 RUN cmake  --build . --target woorpje --target woorpjeSMT --target woorpje2SMT
 RUN mv /woorpje/build/woorpje /woorpje/build/woorpjeSMT /woorpje/build/woorpje2SMT /usr/bin
+RUN mkdir /var/log/woorpje
 
 WORKDIR /
 RUN git clone https://github.com/meipp/nielsen-transformation.git

@@ -28,6 +28,12 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
             out = "Error in " + eq + ": " + str(e.output)
             # return utils.Result(None,time.getTime_ms(),False,1,out)
 
+    with open(f"/var/log/woorpje/{eq.replace('/zaligvinder/models/', '').replace('/', ':')}.log", "w") as f:
+        f.write(eq)
+        f.write("\n\n")
+        f.write(out.replace("\\n", "\n"))
+        f.write("\n")
+
     time.stop ()
     if "unsat" in out:
         return utils.Result(False,time.getTime_ms (),False,1,out)
