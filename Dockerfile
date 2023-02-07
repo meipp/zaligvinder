@@ -12,7 +12,7 @@ RUN wget -O /usr/bin/cvc5 https://github.com/cvc5/cvc5/releases/download/cvc5-1.
 RUN wget -O /tmp/z3-4.8.10-x64-ubuntu-18.04.zip https://github.com/Z3Prover/z3/releases/download/z3-4.8.10/z3-4.8.10-x64-ubuntu-18.04.zip && unzip /tmp/z3-4.8.10-x64-ubuntu-18.04.zip -d /tmp && mv /tmp/z3-4.8.10-x64-ubuntu-18.04/bin/z3 /usr/bin && rm -rf /tmp/z3-4.8.10-x64-ubuntu-18.04.zip /tmp/z3-4.8.10-x64-ubuntu-18.04
 
 # Install woorpje
-RUN git clone --branch simplify https://git.zs.informatik.uni-kiel.de/dbp/wordsolve /woorpje
+RUN git clone --branch spin22 https://git.zs.informatik.uni-kiel.de/dbp/wordsolve /woorpje
 WORKDIR /woorpje
 RUN git submodule init && git submodule update
 WORKDIR /woorpje/build
