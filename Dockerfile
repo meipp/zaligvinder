@@ -6,7 +6,7 @@ ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autocon
 RUN apt-get update
 RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux ${WOORPJE_DEPS} -y
 
-RUN pip3 install numpy tabulate npyscreen matplotlib
+RUN pip3 install --no-cache-dir numpy tabulate npyscreen matplotlib
 RUN wget -O /usr/bin/cvc4 https://github.com/CVC4/CVC4/releases/download/1.8/cvc4-1.8-x86_64-linux-opt && chmod +x /usr/bin/cvc4
 RUN wget -O /usr/bin/cvc5 https://github.com/cvc5/cvc5/releases/download/cvc5-1.0.3/cvc5-Linux && chmod +x /usr/bin/cvc5
 RUN wget -O /tmp/z3-4.8.10-x64-ubuntu-18.04.zip https://github.com/Z3Prover/z3/releases/download/z3-4.8.10/z3-4.8.10-x64-ubuntu-18.04.zip && unzip /tmp/z3-4.8.10-x64-ubuntu-18.04.zip -d /tmp && mv /tmp/z3-4.8.10-x64-ubuntu-18.04/bin/z3 /usr/bin && rm -rf /tmp/z3-4.8.10-x64-ubuntu-18.04.zip /tmp/z3-4.8.10-x64-ubuntu-18.04
