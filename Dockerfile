@@ -16,7 +16,7 @@ RUN git clone --branch spin22 https://git.zs.informatik.uni-kiel.de/dbp/wordsolv
 WORKDIR /woorpje
 RUN git submodule init && git submodule update
 WORKDIR /woorpje/build
-RUN cmake ..
+RUN cmake -DENABLE_Z3=on ..
 RUN cmake  --build . --target woorpje --target woorpjeSMT --target woorpje2SMT
 RUN mv /woorpje/build/woorpje /woorpje/build/woorpjeSMT /woorpje/build/woorpje2SMT /usr/bin
 RUN mkdir /var/log/woorpje
