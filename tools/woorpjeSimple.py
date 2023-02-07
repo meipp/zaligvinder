@@ -14,7 +14,7 @@ def run (eq,timeout,ploc,wd,solver="1",param="60"):
 
     time = timer.Timer ()
     try:
-        call = [path, "--nobanner", "--solver", "1", "--smtsolver", "1", eq]
+        call = [path, "--nobanner", "--solver", "4", "--smtsolver", "0", eq]
         # print(" ".join(call))
         out = subprocess.check_output (call,timeout=int(timeout)).decode().strip()
     except subprocess.TimeoutExpired:
