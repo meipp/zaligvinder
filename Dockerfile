@@ -17,8 +17,8 @@ WORKDIR /woorpje
 RUN git submodule init && git submodule update
 WORKDIR /woorpje/build
 RUN cmake -DENABLE_Z3=on ..
-RUN cmake  --build . --target woorpje --target woorpjeSMT --target woorpje2SMT
-RUN mv /woorpje/build/woorpje /woorpje/build/woorpjeSMT /woorpje/build/woorpje2SMT /usr/bin
+RUN cmake --build . --target woorpjeSMT
+RUN mv /woorpje/build/woorpjeSMT /usr/bin
 RUN mkdir /var/log/woorpje
 
 WORKDIR /
