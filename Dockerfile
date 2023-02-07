@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool"
+ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool libz3-dev libcln-dev libcvc4-dev"
 
 RUN apt-get update
 RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux ${WOORPJE_DEPS} -y
