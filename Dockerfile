@@ -1,10 +1,11 @@
-FROM ubuntu:20.04
+FROM python:3.10
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool libz3-dev libcln-dev libcvc4-dev"
 
 RUN apt-get update
-RUN apt-get install wget unzip build-essential vim python3 python3-pip git haskell-stack tmux ${WOORPJE_DEPS} -y
+RUN apt-get install wget unzip build-essential vim git tmux ${WOORPJE_DEPS} -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_GHC_VERSION=9.2.2 BOOTSTRAP_HASKELL_INSTALL_STACK=1 sh
 
 RUN pip3 install --no-cache-dir numpy tabulate npyscreen matplotlib
 RUN wget -O /usr/bin/cvc4 https://github.com/CVC4/CVC4/releases/download/1.8/cvc4-1.8-x86_64-linux-opt && chmod +x /usr/bin/cvc4
@@ -24,7 +25,7 @@ RUN mkdir /var/log/woorpje
 WORKDIR /
 RUN git clone https://github.com/meipp/nielsen-transformation.git
 WORKDIR /nielsen-transformation
-RUN stack install
+RUN /root/.ghcup/bin/stack install
 RUN mv /root/.local/bin/nielsen-transformation /usr/bin
 RUN mkdir /zaligvinder/
 WORKDIR /zaligvinder
