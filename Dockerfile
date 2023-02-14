@@ -22,13 +22,30 @@ RUN cmake --build . --target woorpjeSMT
 RUN mv /woorpje/build/woorpjeSMT /usr/bin
 RUN mkdir /var/log/woorpje
 
+# Install noodler
+RUN apt-get install libncurses-dev -y
+RUN pip3 install --no-cache-dir --upgrade pip
+RUN pip3 install --no-cache-dir cython scipy gitpython ipython z3
+RUN pip3 install --no-cache-dir z3-solver
+# Install Awali
 WORKDIR /
-RUN git clone https://github.com/meipp/nielsen-transformation.git
+RUN wget http://files.vaucanson-project.org/tarballs/awali-all-v2.2.0-230113.tgz
+RUN tar -xzf /awali-all-v2.2.0-230113.tgz && rm /awali-all-v2.2.0-230113.tgz
+WORKDIR /awali-all-v2.2.0-230113/build
+RUN cmake ..
+RUN make
+RUN make install
+# Install Noodler
+RUN git clone https://github.com/vhavlena/Noodler.git /noodler
+RUN ln -s /noodler/noodler.py /usr/bin/noodler
+
+# Install nielsen-transformation
+RUN git clone https://github.com/meipp/nielsen-transformation.git /nielsen-transformation
 WORKDIR /nielsen-transformation
 RUN /root/.ghcup/bin/stack install
 RUN mv /root/.local/bin/nielsen-transformation /usr/bin
 RUN mkdir /zaligvinder/
 WORKDIR /zaligvinder
 COPY . /zaligvinder/
-RUN echo '{"Binaries" : {"Z3Bin" : {"path" : "/usr/bin/z3"},"cvc4" : {"path" : "/usr/bin/cvc4"},"cvc5" : {"path" : "/usr/bin/cvc5"},"nielsen-transformation" : {"path" : "/usr/bin/nielsen-transformation"},"woorpjeSMT" : {"path" : "/usr/bin/woorpjeSMT"}}}' > /zaligvinder/toolconfig.json
+RUN echo '{"Binaries" : {"Z3Bin" : {"path" : "/usr/bin/z3"},"cvc4" : {"path" : "/usr/bin/cvc4"},"cvc5" : {"path" : "/usr/bin/cvc5"},"nielsen-transformation" : {"path" : "/usr/bin/nielsen-transformation"},"woorpjeSMT" : {"path" : "/usr/bin/woorpjeSMT"},"noodler" : {"path" : "/usr/bin/noodler"}}}' > /zaligvinder/toolconfig.json
 CMD tmux new-session python3 ./astNielsenTransformation.py
