@@ -1,0 +1,5 @@
+(set-logic ALL)
+(declare-fun D () String)
+(assert (= (str.++  D "a" D)  (str.++  "aaaa" "") ))
+(check-sat)
+(get-model)

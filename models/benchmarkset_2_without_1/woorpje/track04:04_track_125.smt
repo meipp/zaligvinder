@@ -1,0 +1,6 @@
+(set-logic ALL)
+(declare-fun B () String)
+(declare-fun C () String)
+(assert (= (str.++  "ccabcccaccb" C "ccaabbacaacabacbacaccabbbbbccaccabbccbcccbcbaaccabccaa")  (str.++  "c" B "cbcccbcbaaccabccaa") ))
+(check-sat)
+(get-model)
