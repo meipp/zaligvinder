@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import timer
 from runners.multi import TheRunner as testrunner
 import utils
 import storage
@@ -45,5 +46,11 @@ summaries = [
     store.postTrackUpdate
 ]
 verifiers = ["cvc4"]
+
+time = timer.Timer ()
 testrunner().runTestSetup (tracks,solvers,voting.MajorityVoter(),summaries,store,timeout,ploc,verifiers)
+time.stop()
+seconds = int(time.getTime())
+print(f"Benchmark took {seconds // 60} minutes, {seconds % 60} seconds")
+
 startwebserver.Server (store.getDB ()).startServer ()
