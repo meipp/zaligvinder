@@ -27,7 +27,7 @@ RUN mkdir /var/log/woorpje
 # Install noodler
 RUN apt-get install libncurses-dev -y
 RUN pip3 install --no-cache-dir --upgrade pip
-RUN pip3 install --no-cache-dir cython scipy gitpython ipython z3
+RUN pip3 install --no-cache-dir cython==0.29.30 scipy gitpython ipython z3
 RUN pip3 install --no-cache-dir z3-solver
 # Install Awali
 WORKDIR /
