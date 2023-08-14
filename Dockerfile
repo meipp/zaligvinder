@@ -1,10 +1,11 @@
 FROM python:3.10
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG GENERAL_DEPS="wget unzip build-essential vim git tmux"
 ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autoconf libtool libz3-dev libcln-dev libcvc4-dev"
 
 RUN apt-get update
-RUN apt-get install wget unzip build-essential vim git tmux ${WOORPJE_DEPS} -y
+RUN apt-get install ${GENERAL_DEPS} ${WOORPJE_DEPS} -y
 RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_GHC_VERSION=9.2.2 BOOTSTRAP_HASKELL_INSTALL_STACK=1 sh
 
 RUN pip3 install --no-cache-dir numpy tabulate npyscreen matplotlib
