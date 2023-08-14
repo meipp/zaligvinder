@@ -6,7 +6,7 @@ ARG WOORPJE_DEPS="cmake libz-dev libboost-program-options-dev gperf flex autocon
 
 RUN apt-get update
 RUN apt-get install ${GENERAL_DEPS} ${WOORPJE_DEPS} -y
-RUN curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_GHC_VERSION=9.2.2 BOOTSTRAP_HASKELL_INSTALL_STACK=1 sh
+RUN wget -qO- https://get.haskellstack.org/ | sh
 
 RUN pip3 install --no-cache-dir numpy tabulate npyscreen matplotlib
 
@@ -45,7 +45,7 @@ RUN ln -s /noodler/noodler.py /usr/bin/noodler
 # Install nielsen-transformation
 RUN git clone https://github.com/meipp/nielsen-transformation.git /nielsen-transformation
 WORKDIR /nielsen-transformation
-RUN /root/.ghcup/bin/stack install
+RUN stack install
 RUN mv /root/.local/bin/nielsen-transformation /usr/bin
 
 # Install zaligvinder
