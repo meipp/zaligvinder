@@ -11,7 +11,7 @@ RUN wget -qO- https://get.haskellstack.org/ | sh
 RUN pip3 install --no-cache-dir numpy tabulate npyscreen matplotlib
 
 # Install z3, cvc4, cvc5
-RUN wget -O /usr/bin/cvc4 https://github.com/CVC4/CVC4/releases/download/1.8/cvc4-1.8-x86_64-linux-opt && chmod +x /usr/bin/cvc4
+RUN wget -O /usr/bin/cvc4 https://github.com/CVC4/CVC4-archived/releases/download/1.8/cvc4-1.8-x86_64-linux-opt && chmod +x /usr/bin/cvc4
 RUN wget -O /usr/bin/cvc5 https://github.com/cvc5/cvc5/releases/download/cvc5-1.0.3/cvc5-Linux && chmod +x /usr/bin/cvc5
 RUN wget -O /tmp/z3-4.8.10-x64-ubuntu-18.04.zip https://github.com/Z3Prover/z3/releases/download/z3-4.8.10/z3-4.8.10-x64-ubuntu-18.04.zip && unzip /tmp/z3-4.8.10-x64-ubuntu-18.04.zip -d /tmp && mv /tmp/z3-4.8.10-x64-ubuntu-18.04/bin/z3 /usr/bin && rm -rf /tmp/z3-4.8.10-x64-ubuntu-18.04.zip /tmp/z3-4.8.10-x64-ubuntu-18.04
 
